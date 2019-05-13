@@ -33,7 +33,8 @@ let interval;
         {
             type: 'confirm',
             name: 'confirmed',
-            message: 'Can you confirm?'
+            message: 'Can you confirm?',
+            symbol: () => (done, aborted) => aborted ? 'poo' : done ? 'yay' : '>>>',
         },
         {
             type: prev => prev && 'toggle',
